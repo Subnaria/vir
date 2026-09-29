@@ -1,34 +1,42 @@
 <!doctype html>
+
 <html lang="fr">
 
 <head>
 
   <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1"
 
-  <meta
-    name="theme-color"
-    content="#0a0f16"
-  >
+>
 
-  <meta
-    name="robots"
-    content="noindex, nofollow"
-  >
+<meta
+name="theme-color"
+content="#0a0f16"
+
+>
+
+<meta
+name="robots"
+content="noindex, nofollow"
+
+>
 
   <title>Tableau de bord — VIR</title>
-
 
   <!-- =================================
        PROTECTION MOBILE
        ================================= -->
-  <link rel="icon" type="image/png" href="./assets/icon.png">
-  <script src="../js/mobileguard.js"></script>
 
+  <link
+    rel="icon"
+    type="image/png"
+    href="../ASS"
+  >
+
+  <script src="../js/mobileguard.js"></script>
 
   <!-- =================================
        POLICE
@@ -42,14 +50,12 @@
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
-    crossorigin
   >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
-
 
   <!-- =================================
        CSS
@@ -62,9 +68,7 @@
 
 </head>
 
-
 <body data-page="dashboard">
-
 
   <!-- =================================
        SIDEBAR
@@ -76,100 +80,115 @@
     aria-label="Navigation du tableau de bord"
   >
 
-    <a
-      class="brand"
-      href="../index.html"
+<a
+  class="brand"
+  href="../index.html"
+>
+
+  <strong>VIR</strong>
+
+  <small>
+    Véhicule d’Intervention Rapide
+  </small>
+
+</a>
+
+
+<nav class="primary-nav">
+
+  <a
+    class="nav-link dashboard-nav is-active"
+    href="#accueil"
+    data-section="accueil"
+  >
+    Accueil
+  </a>
+
+
+  <a
+    class="nav-link dashboard-nav"
+    href="#formation-agent"
+    data-section="formation-agent"
+  >
+    Formation Agent
+  </a>
+
+
+  <!-- =================================
+       CIRCUITS
+       ================================= -->
+
+  <a
+    class="nav-link dashboard-nav"
+    href="#circuits"
+    data-section="circuits"
+  >
+    Circuits
+  </a>
+
+
+  <a
+    class="nav-link dashboard-nav"
+    href="#evaluations"
+    data-section="evaluations"
+  >
+    Évaluations
+  </a>
+
+
+  <!-- ADMIN UNIQUEMENT -->
+
+  <a
+    class="nav-link dashboard-nav admin-nav"
+    href="#administration"
+    data-section="administration"
+  >
+    Administration
+  </a>
+
+</nav>
+
+
+<div class="sidebar-foot">
+
+  <button
+    class="staff-link"
+    type="button"
+    id="logout-button"
+  >
+
+    <svg
+      viewBox="0 0 18 18"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
     >
-      <strong>VIR</strong>
 
-      <small>
-        Véhicule d’Intervention Rapide
-      </small>
-    </a>
+      <path
+        d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5v9A1.5 1.5 0 0 0 4.5 15H7"
+      />
 
+      <path
+        d="M10 5l4 4-4 4"
+      />
 
-    <nav class="primary-nav">
+      <path
+        d="M6 9h8"
+      />
 
-      <a
-        class="nav-link dashboard-nav is-active"
-        href="#accueil"
-        data-section="accueil"
-      >
-        Accueil
-      </a>
+    </svg>
 
+    Déconnexion
 
-      <a
-        class="nav-link dashboard-nav"
-        href="#formation-agent"
-        data-section="formation-agent"
-      >
-        Formation Agent
-      </a>
+  </button>
 
+</div>
 
-      <a
-        class="nav-link dashboard-nav"
-        href="#evaluations"
-        data-section="evaluations"
-      >
-        Évaluations
-      </a>
-
-
-      <!-- ADMIN UNIQUEMENT -->
-
-      <a
-        class="nav-link dashboard-nav admin-nav"
-        href="#administration"
-        data-section="administration"
-      >
-        Administration
-      </a>
-
-    </nav>
-
-
-    <div class="sidebar-foot">
-
-      <button
-        class="staff-link"
-        type="button"
-        id="logout-button"
-      >
-
-        <svg
-          viewBox="0 0 18 18"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-
-          <path
-            d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5v9A1.5 1.5 0 0 0 4.5 15H7"
-          />
-
-          <path
-            d="M10 5l4 4-4 4"
-          />
-
-          <path
-            d="M6 9h8"
-          />
-
-        </svg>
-
-        Déconnexion
-
-      </button>
-
-    </div>
 
   </aside>
-
 
   <!-- =================================
        MOBILE
@@ -180,7 +199,6 @@
     data-close-sidebar
   ></div>
 
-
   <!-- =================================
        CONTENU PRINCIPAL
        ================================= -->
@@ -188,1336 +206,1619 @@
   <main class="main-content">
 
 
-    <!-- =================================
-         TOPBAR
-         ================================= -->
+<!-- =================================
+     TOPBAR
+     ================================= -->
 
-    <header class="topbar">
+<header class="topbar">
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Ouvrir la navigation"
-        aria-expanded="false"
-        aria-controls="sidebar"
-        data-menu-toggle
-      >
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Ouvrir la navigation"
+    aria-expanded="false"
+    aria-controls="sidebar"
+    data-menu-toggle
+  >
 
-        <span></span>
-        <span></span>
-        <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
-      </button>
+  </button>
 
 
-      <div class="topbar-title">
+  <div class="topbar-title">
 
-        <b>
-          Unité VIR
-        </b>
+    <b>
+      Unité VIR
+    </b>
 
-        <span>
-          Tableau de bord formateur
-        </span>
+    <span>
+      Tableau de bord formateur
+    </span>
+
+  </div>
+
+
+  <a
+    class="button"
+    href="../index.html"
+  >
+    ← Portail VIR
+  </a>
+
+</header>
+
+
+<!-- =================================
+     PAGE
+     ================================= -->
+
+<div class="page-wrap">
+
+
+  <!-- =================================================
+       ACCUEIL
+       ================================================= -->
+
+  <section
+    class="dashboard-section is-active"
+    id="section-accueil"
+    data-section-content="accueil"
+  >
+
+    <div class="dashboard-welcome">
+
+      <p class="kicker">
+        Espace formateur
+      </p>
+
+      <h1>
+        Bonjour,
+        <span data-user-name>
+          Chargement…
+        </span>.
+      </h1>
+
+      <p>
+        Bienvenue dans l’espace de gestion et de suivi
+        de l’unité Véhicule d’Intervention Rapide.
+      </p>
+
+    </div>
+
+
+    <div class="dashboard-grid">
+
+
+      <!-- MATRICULE -->
+
+      <article class="dashboard-card">
+
+        <div class="card-top">
+
+          <span class="card-label">
+            Votre matricule
+          </span>
+
+          <span class="card-icon">
+            #
+          </span>
+
+        </div>
+
+        <strong
+          class="card-value"
+          data-user-matricule
+        >
+          —
+        </strong>
+
+        <p class="card-description">
+          Identifiant du personnel VIR.
+        </p>
+
+      </article>
+
+
+      <!-- FONCTION -->
+
+      <article class="dashboard-card">
+
+        <div class="card-top">
+
+          <span class="card-label">
+            Fonction
+          </span>
+
+          <span class="card-icon">
+            ◈
+          </span>
+
+        </div>
+
+        <strong
+          class="card-value"
+          data-user-role
+        >
+          —
+        </strong>
+
+        <p class="card-description">
+          Niveau d’accès actuel.
+        </p>
+
+      </article>
+
+
+      <!-- SESSION -->
+
+      <article class="dashboard-card">
+
+        <div class="card-top">
+
+          <span class="card-label">
+            Session
+          </span>
+
+          <span class="card-icon">
+            ●
+          </span>
+
+        </div>
+
+        <strong class="card-value">
+          Active
+        </strong>
+
+        <p class="card-description">
+          Votre session est actuellement valide.
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- PROFIL -->
+
+    <div class="dashboard-panel">
+
+      <div class="profile-row">
+
+        <div
+          class="profile-avatar"
+          data-user-avatar
+        >
+          —
+        </div>
+
+
+        <div>
+
+          <div
+            class="profile-name"
+            data-user-name
+          >
+            Chargement…
+          </div>
+
+
+          <div class="profile-meta">
+
+            Matricule
+
+            <strong data-user-matricule>
+              —
+            </strong>
+
+            ·
+
+            <span
+              class="status-badge"
+              data-user-role-badge
+            >
+              —
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================
+       FORMATION AGENT
+       ================================================= -->
+
+  <section
+    class="dashboard-section"
+    id="section-formation-agent"
+    data-section-content="formation-agent"
+  >
+
+    <!-- INTRODUCTION -->
+
+    <div class="formation-agent-intro">
+
+      <span class="kicker">
+        Guide formateur
+      </span>
+
+      <h1>
+        Formation Agent
+      </h1>
+
+      <p>
+        Retrouvez ici les étapes à suivre pour accompagner correctement
+        un candidat, les notions à expliquer et les points à vérifier
+        avant sa validation.
+      </p>
+
+    </div>
+
+
+    <!-- RÔLE DU FORMATEUR -->
+
+    <div class="formation-rule">
+
+      <div class="formation-rule-icon">
+        ?
+      </div>
+
+      <div class="formation-rule-content">
+
+        <strong>
+          Rôle du formateur
+        </strong>
+
+        <h3>
+          Accompagner, expliquer et évaluer
+        </h3>
+
+        <p>
+          Le formateur est chargé d’accompagner le candidat pendant
+          l’ensemble de sa formation. Il doit lui transmettre la doctrine
+          VIR, s’assurer de sa bonne compréhension et vérifier sa capacité
+          à appliquer les consignes lors de la phase pratique.
+        </p>
+
+        <p style="margin-top: 12px;">
+
+          <strong>
+            Principe essentiel :
+          </strong>
+
+          le formateur doit prendre le temps d’expliquer les notions
+          et de répondre aux questions du candidat. En revanche, il ne
+          doit pas lui communiquer les réponses pendant l’évaluation officielle.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ÉTAPES DE LA FORMATION -->
+
+    <div class="formation-steps">
+
+
+      <!-- 01 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          01
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Avant la formation
+          </span>
+
+          <h3>
+            Présenter le déroulement
+          </h3>
+
+          <p>
+            Avant de commencer les modules, prenez quelques instants
+            pour expliquer au candidat comment va se dérouler sa formation.
+          </p>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Présenter le rôle du formateur
+            </li>
+
+            <li>
+              Présenter les trois modules théoriques
+            </li>
+
+            <li>
+              Expliquer le fonctionnement de l’évaluation
+            </li>
+
+            <li>
+              Présenter la phase pratique
+            </li>
+
+            <li>
+              Répondre aux premières questions du candidat
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+              La formation comprend une phase théorique,
+              une évaluation officielle de 28 questions nécessitant
+              au minimum 24 bonnes réponses, puis une validation pratique.
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          02
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Module 01
+          </span>
+
+          <h3>
+            Expliquer le rôle de la VIR
+          </h3>
+
+          <p>
+            Le candidat doit comprendre précisément ce qu’est la VIR,
+            son rôle et son objectif dans le dispositif opérationnel.
+          </p>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Définition et rôle de la VIR
+            </li>
+
+            <li>
+              Mission principale de l’unité
+            </li>
+
+            <li>
+              Objectifs opérationnels
+            </li>
+
+            <li>
+              Règles générales de priorité
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+              Avant de poursuivre, assurez-vous que le candidat est
+              capable d’expliquer avec ses propres mots le rôle et
+              l’objectif de la VIR.
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          03
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Module 02
+          </span>
+
+          <h3>
+            Expliquer les conditions de déploiement
+          </h3>
+
+          <p>
+            Le candidat doit connaître les situations dans lesquelles
+            la VIR peut être engagée ainsi que les règles qui encadrent
+            sa prise de service.
+          </p>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Motifs d’engagement
+            </li>
+
+            <li>
+              Conditions de déploiement
+            </li>
+
+            <li>
+              Règles liées à la prise de service
+            </li>
+
+            <li>
+              Utilisation de la radio
+            </li>
+
+            <li>
+              Règles liées au transport
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+              Posez quelques questions au candidat afin de vérifier
+              qu’il sait identifier les conditions nécessaires avant
+              de déployer la VIR.
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          04
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Module 03
+          </span>
+
+          <h3>
+            Expliquer la doctrine d’intervention
+          </h3>
+
+          <p>
+            Cette partie doit permettre au candidat de comprendre
+            le positionnement de la VIR et le fonctionnement des
+            différentes positions lors d’une intervention.
+          </p>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Position P1
+            </li>
+
+            <li>
+              Position P2
+            </li>
+
+            <li>
+              Position P3
+            </li>
+
+            <li>
+              Placement lors d’une poursuite
+            </li>
+
+            <li>
+              Coordination entre les différents véhicules
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+              Ne vous contentez pas de faire lire le module.
+              Assurez-vous que le candidat comprend réellement le rôle
+              de chaque position et sait dans quelle situation elle
+              doit être utilisée.
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 05 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          05
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Avant l’évaluation
+          </span>
+
+          <h3>
+            Vérifier les connaissances
+          </h3>
+
+          <p>
+            Avant de donner accès à l’évaluation officielle, vérifiez
+            que le candidat maîtrise les trois modules et qu’il est
+            prêt à être évalué.
+          </p>
+
+          <div class="formation-evaluation-box">
+
+            <div class="formation-evaluation-head">
+
+              <h4>
+                Score minimum requis
+              </h4>
+
+              <div class="formation-score">
+                24 / 28
+              </div>
+
+            </div>
+
+            <p>
+              Le candidat doit obtenir au minimum 24 bonnes réponses
+              sur les 28 questions de l’évaluation officielle.
+            </p>
+
+          </div>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Vérifier que les trois modules ont été étudiés
+            </li>
+
+            <li>
+              Répondre aux dernières questions
+            </li>
+
+            <li>
+              Vérifier la compréhension de la doctrine
+            </li>
+
+            <li>
+              Rappeler que l’évaluation comporte 28 questions
+            </li>
+
+            <li>
+              Rappeler que 24 bonnes réponses sont nécessaires
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+              <strong>
+                En cas de doute :
+              </strong>
+
+              si le candidat ne maîtrise pas encore une notion,
+              prenez le temps de la réexpliquer avant de lancer
+              l’évaluation officielle.
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 06 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          06
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Évaluation officielle
+          </span>
+
+          <h3>
+            Lancer et encadrer l’évaluation
+          </h3>
+
+          <p>
+            Lorsque le candidat est prêt, générez un code d’évaluation
+            depuis l’onglet Évaluations et transmettez-le au candidat.
+          </p>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Générer un code unique
+            </li>
+
+            <li>
+              Transmettre le code au candidat
+            </li>
+
+            <li>
+              Laisser le candidat répondre seul
+            </li>
+
+            <li>
+              Ne pas communiquer les réponses
+            </li>
+
+            <li>
+              Prendre connaissance du résultat une fois l’évaluation terminée
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+
+              <strong>
+                Règle d’impartialité :
+              </strong>
+
+              l’évaluation doit mesurer les connaissances réellement
+              acquises par le candidat. Le formateur ne doit donc pas
+              intervenir pour orienter ses réponses.
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 07 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          07
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Pratique
+          </span>
+
+          <h3>
+            Préparer la mise en pratique
+          </h3>
+
+          <p>
+            Après validation de l’évaluation théorique, le candidat
+            peut passer à la partie pratique. Expliquez clairement
+            les attentes avant de commencer les circuits.
+          </p>
+
+          <div class="formation-practice">
+
+            <div class="formation-practice-card">
+
+              <strong>
+                Circuit
+              </strong>
+
+              <p>
+                Présenter le parcours à réaliser et les différentes
+                étapes attendues.
+              </p>
+
+            </div>
+
+            <div class="formation-practice-card">
+
+              <strong>
+                Temps imparti
+              </strong>
+
+              <p>
+                Présenter clairement le temps disponible pour réaliser
+                le parcours.
+              </p>
+
+            </div>
+
+          </div>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Présenter les deux circuits
+            </li>
+
+            <li>
+              Expliquer le parcours à réaliser
+            </li>
+
+            <li>
+              Présenter le temps imparti
+            </li>
+
+            <li>
+              Rappeler les consignes de sécurité et d’intervention
+            </li>
+
+            <li>
+              Vérifier que le candidat a compris les consignes
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+
+              <strong>
+                Avant le départ :
+              </strong>
+
+              le candidat doit savoir exactement ce qui lui est demandé
+              avant de commencer le circuit. Évitez de modifier les
+              consignes une fois le parcours lancé.
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 08 -->
+
+      <article class="formation-step">
+
+        <div class="formation-step-number">
+          08
+        </div>
+
+        <div class="formation-step-content">
+
+          <span class="step-label">
+            Fin de formation
+          </span>
+
+          <h3>
+            Débriefer et valider
+          </h3>
+
+          <p>
+            Une fois la partie pratique terminée, prenez le temps
+            de faire un retour au candidat sur sa prestation.
+          </p>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Faire un bilan de la prestation
+            </li>
+
+            <li>
+              Identifier les points maîtrisés
+            </li>
+
+            <li>
+              Identifier les erreurs ou points à améliorer
+            </li>
+
+            <li>
+              Répondre aux dernières questions
+            </li>
+
+            <li>
+              Confirmer la validation ou indiquer les éléments à retravailler
+            </li>
+
+          </ul>
+
+          <div class="formation-objective">
+
+            <span>
+
+              <strong>
+                Objectif final :
+              </strong>
+
+              le candidat doit être capable d’expliquer la doctrine VIR
+              et de l’appliquer correctement lors de la mise en pratique.
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- RÉSUMÉ -->
+
+    <div class="formation-summary">
+
+      <div class="formation-summary-card">
+
+        <div class="formation-summary-number">
+          01
+        </div>
+
+        <strong>
+          Expliquer
+        </strong>
+
+        <p>
+          Transmettre clairement la doctrine VIR.
+        </p>
 
       </div>
 
 
-      <a
-        class="button"
-        href="../index.html"
-      >
-        ← Portail VIR
-      </a>
+      <div class="formation-summary-card">
 
-    </header>
+        <div class="formation-summary-number">
+          02
+        </div>
+
+        <strong>
+          Vérifier
+        </strong>
+
+        <p>
+          S’assurer que le candidat maîtrise les notions.
+        </p>
+
+      </div>
 
 
-    <!-- =================================
-         PAGE
-         ================================= -->
+      <div class="formation-summary-card">
 
-    <div class="page-wrap">
+        <div class="formation-summary-number">
+          03
+        </div>
+
+        <strong>
+          Évaluer
+        </strong>
+
+        <p>
+          Évaluer les connaissances et la pratique.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-      <!-- =================================================
-           ACCUEIL
-           ================================================= -->
+  <!-- =================================================
+       CIRCUITS
+       ================================================= -->
 
-      <section
-        class="dashboard-section is-active"
-        id="section-accueil"
-        data-section-content="accueil"
-      >
+  <section
+    class="dashboard-section"
+    id="section-circuits"
+    data-section-content="circuits"
+  >
 
-        <div class="dashboard-welcome">
+    <!-- INTRODUCTION -->
 
-          <p class="kicker">
-            Espace formateur
-          </p>
+    <div class="formation-agent-intro">
 
-          <h1>
-            Bonjour,
-            <span data-user-name>
-              Chargement…
-            </span>.
-          </h1>
+      <span class="kicker">
+        Partie pratique
+      </span>
+
+      <h1>
+        Circuits
+      </h1>
+
+      <p>
+        Retrouvez ici les deux parcours pratiques à réaliser par le candidat.
+        Chaque circuit présente son temps imparti, les points de vigilance,
+        le point de départ et une vidéo permettant de visualiser le parcours.
+      </p>
+
+    </div>
+
+
+    <!-- =================================================
+         CIRCUIT 01
+         ================================================= -->
+
+    <article class="formation-step circuit-card">
+
+      <div class="formation-step-number">
+        01
+      </div>
+
+      <div class="formation-step-content">
+
+        <span class="step-label">
+          Circuit 01
+        </span>
+
+        <h2>
+          Circuit 1
+        </h2>
+
+        <p>
+          Présentation du premier parcours pratique à réaliser par le candidat.
+          Les informations ci-dessous permettent au formateur de présenter
+          clairement le circuit avant le départ.
+        </p>
+
+
+        <!-- TEMPS -->
+
+        <div class="formation-evaluation-box">
+
+          <div class="formation-evaluation-head">
+
+            <h4>
+              Temps imparti
+            </h4>
+
+            <div class="formation-score">
+              1m 05s
+            </div>
+
+          </div>
 
           <p>
-            Bienvenue dans l’espace de gestion et de suivi
-            de l’unité Véhicule d’Intervention Rapide.
+            Le candidat doit terminer ce circuit dans le temps imparti.
           </p>
 
         </div>
 
 
-        <div class="dashboard-grid">
 
+        <!-- CARTE -->
 
-          <!-- MATRICULE -->
+        <div class="circuit-section">
 
-          <article class="dashboard-card">
+        <div class="circuit-section-head">
 
-            <div class="card-top">
-
-              <span class="card-label">
-                Votre matricule
-              </span>
-
-              <span class="card-icon">
-                #
-              </span>
-
-            </div>
-
-            <strong
-              class="card-value"
-              data-user-matricule
-            >
-              —
-            </strong>
-
-            <p class="card-description">
-              Identifiant du personnel VIR.
-            </p>
-
-          </article>
-
-
-          <!-- FONCTION -->
-
-          <article class="dashboard-card">
-
-            <div class="card-top">
-
-              <span class="card-label">
-                Fonction
-              </span>
-
-              <span class="card-icon">
-                ◈
-              </span>
-
-            </div>
-
-            <strong
-              class="card-value"
-              data-user-role
-            >
-              —
-            </strong>
-
-            <p class="card-description">
-              Niveau d’accès actuel.
-            </p>
-
-          </article>
-
-
-          <!-- SESSION -->
-
-          <article class="dashboard-card">
-
-            <div class="card-top">
-
-              <span class="card-label">
-                Session
-              </span>
-
-              <span class="card-icon">
-                ●
-              </span>
-
-            </div>
-
-            <strong class="card-value">
-              Active
-            </strong>
-
-            <p class="card-description">
-              Votre session est actuellement valide.
-            </p>
-
-          </article>
-
-        </div>
-
-
-        <!-- PROFIL -->
-
-        <div class="dashboard-panel">
-
-          <div class="profile-row">
-
-            <div
-              class="profile-avatar"
-              data-user-avatar
-            >
-              —
-            </div>
-
-
-            <div>
-
-              <div
-                class="profile-name"
-                data-user-name
-              >
-                Chargement…
-              </div>
-
-
-              <div class="profile-meta">
-
-                Matricule
-
-                <strong data-user-matricule>
-                  —
-                </strong>
-
-                ·
-
-                <span
-                  class="status-badge"
-                  data-user-role-badge
-                >
-                  —
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =================================================
-           FORMATION AGENT
-           ================================================= -->
-
-      <section
-        class="dashboard-section"
-        id="section-formation-agent"
-        data-section-content="formation-agent"
-        >
-
-        <!-- ==================================================
-            INTRODUCTION
-        ================================================== -->
-
-        <div class="formation-agent-intro">
-
-            <span class="kicker">Guide formateur</span>
-
-            <h1>Formation Agent</h1>
-
-            <p>
-            Retrouvez ici les étapes à suivre pour accompagner correctement
-            un candidat, les notions à expliquer et les points à vérifier
-            avant sa validation.
-            </p>
-
-        </div>
-
-
-        <!-- ==================================================
-            RÔLE DU FORMATEUR
-        ================================================== -->
-
-        <div class="formation-rule">
-
-            <div class="formation-rule-icon">
-            ?
-            </div>
-
-            <div class="formation-rule-content">
-
-            <strong>Rôle du formateur</strong>
-
-            <h3>Accompagner, expliquer et évaluer</h3>
-
-            <p>
-                Le formateur est chargé d’accompagner le candidat pendant
-                l’ensemble de sa formation. Il doit lui transmettre la doctrine
-                VIR, s’assurer de sa bonne compréhension et vérifier sa capacité
-                à appliquer les consignes lors de la phase pratique.
-            </p>
-
-            <p style="margin-top: 12px;">
-                <strong>Principe essentiel :</strong>
-                le formateur doit prendre le temps d’expliquer les notions
-                et de répondre aux questions du candidat. En revanche, il ne
-                doit pas lui communiquer les réponses pendant l’évaluation officielle.
-            </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- ==================================================
-            ÉTAPES DE LA FORMATION
-        ================================================== -->
-
-        <div class="formation-steps">
-
-
-            <!-- 01 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                01
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Avant la formation
-                </span>
-
-                <h3>Présenter le déroulement</h3>
-
-                <p>
-                Avant de commencer les modules, prenez quelques instants
-                pour expliquer au candidat comment va se dérouler sa formation.
-                </p>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Présenter le rôle du formateur
-                </li>
-
-                <li>
-                    Présenter les trois modules théoriques
-                </li>
-
-                <li>
-                    Expliquer le fonctionnement de l’évaluation
-                </li>
-
-                <li>
-                    Présenter la phase pratique
-                </li>
-
-                <li>
-                    Répondre aux premières questions du candidat
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    La formation comprend une phase théorique,
-                    une évaluation officielle de 28 questions nécessitant
-                    au minimum 24 bonnes réponses, puis une validation pratique.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 02 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                02
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Module 01
-                </span>
-
-                <h3>Expliquer le rôle de la VIR</h3>
-
-                <p>
-                Le candidat doit comprendre précisément ce qu’est la VIR,
-                son rôle et son objectif dans le dispositif opérationnel.
-                </p>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Définition et rôle de la VIR
-                </li>
-
-                <li>
-                    Mission principale de l’unité
-                </li>
-
-                <li>
-                    Objectifs opérationnels
-                </li>
-
-                <li>
-                    Règles générales de priorité
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    Avant de poursuivre, assurez-vous que le candidat est
-                    capable d’expliquer avec ses propres mots le rôle et
-                    l’objectif de la VIR.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 03 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                03
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Module 02
-                </span>
-
-                <h3>Expliquer les conditions de déploiement</h3>
-
-                <p>
-                Le candidat doit connaître les situations dans lesquelles
-                la VIR peut être engagée ainsi que les règles qui encadrent
-                sa prise de service.
-                </p>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Motifs d’engagement
-                </li>
-
-                <li>
-                    Conditions de déploiement
-                </li>
-
-                <li>
-                    Règles liées à la prise de service
-                </li>
-
-                <li>
-                    Utilisation de la radio
-                </li>
-
-                <li>
-                    Règles liées au transport
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    Posez quelques questions au candidat afin de vérifier
-                    qu’il sait identifier les conditions nécessaires avant
-                    de déployer la VIR.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 04 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                04
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Module 03
-                </span>
-
-                <h3>Expliquer la doctrine d’intervention</h3>
-
-                <p>
-                Cette partie doit permettre au candidat de comprendre
-                le positionnement de la VIR et le fonctionnement des
-                différentes positions lors d’une intervention.
-                </p>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Position P1
-                </li>
-
-                <li>
-                    Position P2
-                </li>
-
-                <li>
-                    Position P3
-                </li>
-
-                <li>
-                    Placement lors d’une poursuite
-                </li>
-
-                <li>
-                    Coordination entre les différents véhicules
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    Ne vous contentez pas de faire lire le module.
-                    Assurez-vous que le candidat comprend réellement le rôle
-                    de chaque position et sait dans quelle situation elle
-                    doit être utilisée.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 05 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                05
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Avant l’évaluation
-                </span>
-
-                <h3>Vérifier les connaissances</h3>
-
-                <p>
-                Avant de donner accès à l’évaluation officielle, vérifiez
-                que le candidat maîtrise les trois modules et qu’il est
-                prêt à être évalué.
-                </p>
-
-                <div class="formation-evaluation-box">
-
-                <div class="formation-evaluation-head">
-
-                    <h4>
-                    Score minimum requis
-                    </h4>
-
-                    <div class="formation-score">
-                    24 / 28
-                    </div>
-
-                </div>
-
-                <p>
-                    Le candidat doit obtenir au minimum 24 bonnes réponses
-                    sur les 28 questions de l’évaluation officielle.
-                </p>
-
-                </div>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Vérifier que les trois modules ont été étudiés
-                </li>
-
-                <li>
-                    Répondre aux dernières questions
-                </li>
-
-                <li>
-                    Vérifier la compréhension de la doctrine
-                </li>
-
-                <li>
-                    Rappeler que l’évaluation comporte 28 questions
-                </li>
-
-                <li>
-                    Rappeler que 24 bonnes réponses sont nécessaires
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    <strong>En cas de doute :</strong>
-                    si le candidat ne maîtrise pas encore une notion,
-                    prenez le temps de la réexpliquer avant de lancer
-                    l’évaluation officielle.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 06 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                06
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Évaluation officielle
-                </span>
-
-                <h3>Lancer et encadrer l’évaluation</h3>
-
-                <p>
-                Lorsque le candidat est prêt, générez un code d’évaluation
-                depuis l’onglet Évaluations et transmettez-le au candidat.
-                </p>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Générer un code unique
-                </li>
-
-                <li>
-                    Transmettre le code au candidat
-                </li>
-
-                <li>
-                    Laisser le candidat répondre seul
-                </li>
-
-                <li>
-                    Ne pas communiquer les réponses
-                </li>
-
-                <li>
-                    Prendre connaissance du résultat une fois l’évaluation terminée
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    <strong>Règle d’impartialité :</strong>
-                    l’évaluation doit mesurer les connaissances réellement
-                    acquises par le candidat. Le formateur ne doit donc pas
-                    intervenir pour orienter ses réponses.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 07 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                07
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Pratique
-                </span>
-
-                <h3>Préparer la mise en pratique</h3>
-
-                <p>
-                Après validation de l’évaluation théorique, le candidat
-                peut passer à la partie pratique. Expliquez clairement
-                les attentes avant de commencer les circuits.
-                </p>
-
-                <div class="formation-practice">
-
-                <div class="formation-practice-card">
-
-                    <strong>
-                    Circuit
-                    </strong>
-
-                    <p>
-                    Présenter le parcours à réaliser et les différentes
-                    étapes attendues.
-                    </p>
-
-                </div>
-
-                <div class="formation-practice-card">
-
-                    <strong>
-                    Temps imparti
-                    </strong>
-
-                    <p>
-                    Présenter clairement le temps disponible pour réaliser
-                    le parcours.
-                    </p>
-
-                </div>
-
-                </div>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Présenter les deux circuits
-                </li>
-
-                <li>
-                    Expliquer le parcours à réaliser
-                </li>
-
-                <li>
-                    Présenter le temps imparti
-                </li>
-
-                <li>
-                    Rappeler les consignes de sécurité et d’intervention
-                </li>
-
-                <li>
-                    Vérifier que le candidat a compris les consignes
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    <strong>Avant le départ :</strong>
-                    le candidat doit savoir exactement ce qui lui est demandé
-                    avant de commencer le circuit. Évitez de modifier les
-                    consignes une fois le parcours lancé.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-            <!-- 08 -->
-
-            <article class="formation-step">
-
-            <div class="formation-step-number">
-                08
-            </div>
-
-            <div class="formation-step-content">
-
-                <span class="step-label">
-                Fin de formation
-                </span>
-
-                <h3>Débriefer et valider</h3>
-
-                <p>
-                Une fois la partie pratique terminée, prenez le temps
-                de faire un retour au candidat sur sa prestation.
-                </p>
-
-                <ul class="formation-checklist">
-
-                <li>
-                    Faire un bilan de la prestation
-                </li>
-
-                <li>
-                    Identifier les points maîtrisés
-                </li>
-
-                <li>
-                    Identifier les erreurs ou points à améliorer
-                </li>
-
-                <li>
-                    Répondre aux dernières questions
-                </li>
-
-                <li>
-                    Confirmer la validation ou indiquer les éléments à retravailler
-                </li>
-
-                </ul>
-
-                <div class="formation-objective">
-
-                <span>
-                    <strong>Objectif final :</strong>
-                    le candidat doit être capable d’expliquer la doctrine VIR
-                    et de l’appliquer correctement lors de la mise en pratique.
-                </span>
-
-                </div>
-
-            </div>
-
-            </article>
-
-
-        </div>
-
-
-        <!-- ==================================================
-            RÉSUMÉ
-        ================================================== -->
-
-        <div class="formation-summary">
-
-            <div class="formation-summary-card">
-
-            <div class="formation-summary-number">
-                01
-            </div>
-
-            <strong>Expliquer</strong>
-
-            <p>
-                Transmettre clairement la doctrine VIR.
-            </p>
-
-            </div>
-
-
-            <div class="formation-summary-card">
-
-            <div class="formation-summary-number">
-                02
-            </div>
-
-            <strong>Vérifier</strong>
-
-            <p>
-                S’assurer que le candidat maîtrise les notions.
-            </p>
-
-            </div>
-
-
-            <div class="formation-summary-card">
-
-            <div class="formation-summary-number">
-                03
-            </div>
-
-            <strong>Évaluer</strong>
-
-            <p>
-                Évaluer les connaissances et la pratique.
-            </p>
-
-            </div>
-
-        </div>
-
-        </section>
-
-
-      <!-- =================================================
-           ÉVALUATIONS
-           ================================================= -->
-
-      <section
-        class="dashboard-section"
-        id="section-evaluations"
-        data-section-content="evaluations"
-      >
-
-        <div class="dashboard-section-head">
-
-          <div>
-
-            <p class="kicker">
-              Suivi
-            </p>
-
-            <h2>
-              Évaluations
-            </h2>
-
-            <p>
-              Générez les codes d’accès aux évaluations
-              officielles et suivez les résultats des candidats.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- GÉNÉRATION DU CODE -->
-
-        <div class="dashboard-panel evaluation-code-box">
-
-          <div>
-
-            <p class="kicker">
-              Accès candidat
-            </p>
+            <span class="step-label">
+            Départ du circuit
+            </span>
 
             <h3>
-              Code d’évaluation
+            Localisation
             </h3>
 
-            <p>
-              Générez un code unique permettant à un candidat
-              d’accéder à l’évaluation VIR.
-            </p>
+        </div>
 
-          </div>
+        <div class="circuit-map circuit-map-clickable">
 
+            <img
+            src="/assets/localisation-circuit1.png"
+            alt="Carte indiquant le départ du circuit 1"
+            loading="lazy"
+            data-lightbox-image
+            >
 
-            <div class="evaluation-code-actions">
-
-            <div class="code-generator-actions">
-
-                <button
-                class="button button-primary"
-                id="generate-code-btn"
-                type="button"
-                >
-                Générer un code
-                </button>
-
-                <button
-                class="button button-secondary"
-                id="copy-code-btn"
-                type="button"
-                >
-                Copier le code
-                </button>
-
-            </div>
-
-            <div
-                id="generated-code"
-                class="generated-code"
-                aria-live="polite"
-            ></div>
-
-            <p
-                id="code-message"
-                aria-live="polite"
-            ></p>
-
+            <div class="circuit-map-overlay">
+            <span>Cliquer pour agrandir</span>
             </div>
 
         </div>
 
+        </div>
 
-        <!-- RÉSULTATS -->
 
-        <div class="dashboard-panel">
+        <!-- POINTS DE VIGILANCE -->
 
-          <h3>
-            Résultats des évaluations
-          </h3>
+        <div class="circuit-section">
 
-          <p>
-            Les résultats des tests et évaluations
-            apparaîtront ici.
-          </p>
+          <div class="circuit-section-head">
 
-          <div class="status-badge">
-            Historique en developpement…
+            <span class="step-label">
+              Vigilance
+            </span>
+
+            <h3>
+              Points de vigilance
+            </h3>
+
           </div>
+
+          <ul class="formation-checklist">
+
+            <li>
+              Point de vigilance n°1 — Faites attention à la vitesse pour ne pas qu'il vole.
+            </li>
+
+            <li>
+              Point de vigilance n°2 — attention au nombre de fois qu'il ce cogne contre les murs.
+            </li>
+
+            <li>
+              Point de vigilance n°3 — ne pas noyer le véhicule dans l'eau.
+            </li>
+
+          </ul>
 
         </div>
 
-      </section>
+
+        <!-- VIDÉO -->
+
+        <div class="circuit-section">
+
+        <div class="circuit-section-head">
+
+            <span class="step-label">
+            Démonstration
+            </span>
+
+            <h3>
+            Vidéo du circuit
+            </h3>
+
+        </div>
+
+        <div class="circuit-video">
+
+            <iframe
+            src="https://www.youtube.com/embed/k-dcRXhjdh8"
+            title="Circuit 1 — Formation VIR"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+            </iframe>
+
+        </div>
+
+        </div>
+
+        <!-- CONSIGNES -->
+
+        <div class="formation-objective">
+
+          <span>
+
+            <strong>
+              Avant le départ :
+            </strong>
+
+            présentez le point de départ, le temps imparti et les différents
+            points de vigilance au candidat avant de lancer le circuit.
+
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
 
 
-      <!-- =================================================
-           ADMINISTRATION
-           ================================================= -->
 
-      <section
-        class="dashboard-section admin-only"
-        id="section-administration"
-        data-section-content="administration"
-      >
 
-        <div class="dashboard-section-head">
 
-          <div>
+    <!-- =================================================
+         RAPPEL FORMATEUR
+         ================================================= -->
 
-            <p class="kicker">
-              Administration
-            </p>
+    <div class="formation-rule">
 
-            <h2>
-              Gestion du personnel
-            </h2>
+      <div class="formation-rule-icon">
+        !
+      </div>
 
-            <p>
-              Créez et gérez les comptes ayant accès
-              à l’espace formateur VIR.
-            </p>
+      <div class="formation-rule-content">
 
-          </div>
+        <strong>
+          Rappel formateur
+        </strong>
 
+        <h3>
+          Présenter les consignes avant le départ
+        </h3>
+
+        <p>
+          Avant chaque circuit, assurez-vous que le candidat connaît
+          le parcours, le temps imparti et les différents points
+          de vigilance. Une fois le circuit commencé, laissez le candidat
+          réaliser le parcours dans les conditions prévues.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================
+       ÉVALUATIONS
+       ================================================= -->
+
+  <section
+    class="dashboard-section"
+    id="section-evaluations"
+    data-section-content="evaluations"
+  >
+
+    <div class="dashboard-section-head">
+
+      <div>
+
+        <p class="kicker">
+          Suivi
+        </p>
+
+        <h2>
+          Évaluations
+        </h2>
+
+        <p>
+          Générez les codes d’accès aux évaluations
+          officielles et suivez les résultats des candidats.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- GÉNÉRATION DU CODE -->
+
+    <div class="dashboard-panel evaluation-code-box">
+
+      <div>
+
+        <p class="kicker">
+          Accès candidat
+        </p>
+
+        <h3>
+          Code d’évaluation
+        </h3>
+
+        <p>
+          Générez un code unique permettant à un candidat
+          d’accéder à l’évaluation VIR.
+        </p>
+
+      </div>
+
+
+      <div class="evaluation-code-actions">
+
+        <div class="code-generator-actions">
 
           <button
-            class="button"
+            class="button button-primary"
+            id="generate-code-btn"
             type="button"
-            id="admin-create-button"
           >
-            + Créer un compte
+            Générer un code
+          </button>
+
+          <button
+            class="button button-secondary"
+            id="copy-code-btn"
+            type="button"
+          >
+            Copier le code
           </button>
 
         </div>
 
-
-        <!-- FORMULAIRE CRÉATION -->
-
         <div
-          class="dashboard-panel admin-form-panel"
-          id="admin-create-panel"
-          hidden
-        >
-
-          <div class="admin-panel-head">
-
-            <div>
-
-              <p class="kicker">
-                Nouveau compte
-              </p>
-
-              <h3>
-                Créer un compte formateur
-              </h3>
-
-            </div>
-
-
-            <button
-              class="admin-close-button"
-              type="button"
-              id="admin-create-close"
-              aria-label="Fermer"
-            >
-              ×
-            </button>
-
-          </div>
-
-
-          <form id="admin-create-form">
-
-            <div class="admin-form-grid">
-
-
-              <label class="admin-field">
-
-                <span>
-                  Nom et prénom
-                </span>
-
-                <input
-                  type="text"
-                  name="nom_prenom"
-                  placeholder="Ex. Jean Dupont"
-                  maxlength="150"
-                  required
-                >
-
-              </label>
-
-
-              <label class="admin-field">
-
-                <span>
-                  Matricule
-                </span>
-
-                <input
-                  type="text"
-                  name="matricule"
-                  placeholder="Ex. 72"
-                  maxlength="50"
-                  required
-                >
-
-              </label>
-
-
-              <label class="admin-field">
-
-                <span>
-                  Mot de passe
-                </span>
-
-                <input
-                  type="password"
-                  name="mot_de_passe"
-                  placeholder="Mot de passe"
-                  required
-                >
-
-              </label>
-
-
-              <label class="admin-field">
-
-                <span>
-                  Rôle
-                </span>
-
-                <select name="role">
-
-                  <option value="formateur">
-                    Formateur
-                  </option>
-
-                  <option value="admin">
-                    Administrateur
-                  </option>
-
-                </select>
-
-              </label>
-
-            </div>
-
-
-            <div
-              class="admin-form-message"
-              id="admin-create-message"
-              hidden
-            ></div>
-
-
-            <div class="admin-form-actions">
-
-              <button
-                class="button button-secondary"
-                type="button"
-                id="admin-create-cancel"
-              >
-                Annuler
-              </button>
-
-
-              <button
-                class="button"
-                type="submit"
-                id="admin-create-submit"
-              >
-                Créer le compte
-              </button>
-
-            </div>
-
-          </form>
-
-        </div>
-
-
-        <!-- COMPTEURS -->
-
-        <div class="dashboard-grid">
-
-
-          <article class="dashboard-card">
-
-            <div class="card-top">
-
-              <span class="card-label">
-                Comptes
-              </span>
-
-              <span class="card-icon">
-                #
-              </span>
-
-            </div>
-
-            <strong
-              class="card-value"
-              id="admin-account-count"
-            >
-              —
-            </strong>
-
-            <p class="card-description">
-              Comptes formateurs enregistrés.
-            </p>
-
-          </article>
-
-
-          <article class="dashboard-card">
-
-            <div class="card-top">
-
-              <span class="card-label">
-                Actifs
-              </span>
-
-              <span class="card-icon">
-                ●
-              </span>
-
-            </div>
-
-            <strong
-              class="card-value"
-              id="admin-active-count"
-            >
-              —
-            </strong>
-
-            <p class="card-description">
-              Comptes actuellement autorisés.
-            </p>
-
-          </article>
-
-
-          <article class="dashboard-card">
-
-            <div class="card-top">
-
-              <span class="card-label">
-                Bloqués
-              </span>
-
-              <span class="card-icon">
-                !
-              </span>
-
-            </div>
-
-            <strong
-              class="card-value"
-              id="admin-blocked-count"
-            >
-              —
-            </strong>
-
-            <p class="card-description">
-              Comptes dont l’accès est suspendu.
-            </p>
-
-          </article>
-
-        </div>
-
-
-        <!-- LISTE DES COMPTES -->
-
-        <div class="dashboard-panel">
-
-          <div class="admin-panel-head">
-
-            <div>
-
-              <h3>
-                Comptes formateurs
-              </h3>
-
-              <p>
-                Gérez les comptes, leurs droits et
-                leur accès au portail.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div id="admin-users-list">
-
-            <div class="status-badge">
-              Chargement des comptes…
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =================================================
-           FOOTER
-           ================================================= -->
-
-      <footer class="page-footer">
-        VIR — Espace formateur
-      </footer>
+          id="generated-code"
+          class="generated-code"
+          aria-live="polite"
+        ></div>
+
+        <p
+          id="code-message"
+          aria-live="polite"
+        ></p>
+
+      </div>
 
     </div>
 
-  </main>
 
+    <!-- RÉSULTATS -->
+
+    <div class="dashboard-panel">
+
+      <h3>
+        Résultats des évaluations
+      </h3>
+
+      <p>
+        Les résultats des tests et évaluations
+        apparaîtront ici.
+      </p>
+
+      <div class="status-badge">
+        Historique en developpement…
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================
+       ADMINISTRATION
+       ================================================= -->
+
+  <section
+    class="dashboard-section admin-only"
+    id="section-administration"
+    data-section-content="administration"
+  >
+
+    <div class="dashboard-section-head">
+
+      <div>
+
+        <p class="kicker">
+          Administration
+        </p>
+
+        <h2>
+          Gestion du personnel
+        </h2>
+
+        <p>
+          Créez et gérez les comptes ayant accès
+          à l’espace formateur VIR.
+        </p>
+
+      </div>
+
+
+      <button
+        class="button"
+        type="button"
+        id="admin-create-button"
+      >
+        + Créer un compte
+      </button>
+
+    </div>
+
+
+    <!-- FORMULAIRE CRÉATION -->
+
+    <div
+      class="dashboard-panel admin-form-panel"
+      id="admin-create-panel"
+      hidden
+    >
+
+      <div class="admin-panel-head">
+
+        <div>
+
+          <p class="kicker">
+            Nouveau compte
+          </p>
+
+          <h3>
+            Créer un compte formateur
+          </h3>
+
+        </div>
+
+
+        <button
+          class="admin-close-button"
+          type="button"
+          id="admin-create-close"
+          aria-label="Fermer"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <form id="admin-create-form">
+
+        <div class="admin-form-grid">
+
+
+          <label class="admin-field">
+
+            <span>
+              Nom et prénom
+            </span>
+
+            <input
+              type="text"
+              name="nom_prenom"
+              placeholder="Ex. Jean Dupont"
+              maxlength="150"
+              required
+            >
+
+          </label>
+
+
+          <label class="admin-field">
+
+            <span>
+              Matricule
+            </span>
+
+            <input
+              type="text"
+              name="matricule"
+              placeholder="Ex. 72"
+              maxlength="50"
+              required
+            >
+
+          </label>
+
+
+          <label class="admin-field">
+
+            <span>
+              Mot de passe
+            </span>
+
+            <input
+              type="password"
+              name="mot_de_passe"
+              placeholder="Mot de passe"
+              required
+            >
+
+          </label>
+
+
+          <label class="admin-field">
+
+            <span>
+              Rôle
+            </span>
+
+            <select name="role">
+
+              <option value="formateur">
+                Formateur
+              </option>
+
+              <option value="admin">
+                Administrateur
+              </option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <div
+          class="admin-form-message"
+          id="admin-create-message"
+          hidden
+        ></div>
+
+
+        <div class="admin-form-actions">
+
+          <button
+            class="button button-secondary"
+            type="button"
+            id="admin-create-cancel"
+          >
+            Annuler
+          </button>
+
+
+          <button
+            class="button"
+            type="submit"
+            id="admin-create-submit"
+          >
+            Créer le compte
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+
+    <!-- COMPTEURS -->
+
+    <div class="dashboard-grid">
+
+
+      <article class="dashboard-card">
+
+        <div class="card-top">
+
+          <span class="card-label">
+            Comptes
+          </span>
+
+          <span class="card-icon">
+            #
+          </span>
+
+        </div>
+
+        <strong
+          class="card-value"
+          id="admin-account-count"
+        >
+          —
+        </strong>
+
+        <p class="card-description">
+          Comptes formateurs enregistrés.
+        </p>
+
+      </article>
+
+
+      <article class="dashboard-card">
+
+        <div class="card-top">
+
+          <span class="card-label">
+            Actifs
+          </span>
+
+          <span class="card-icon">
+            ●
+          </span>
+
+        </div>
+
+        <strong
+          class="card-value"
+          id="admin-active-count"
+        >
+          —
+        </strong>
+
+        <p class="card-description">
+          Comptes actuellement autorisés.
+        </p>
+
+      </article>
+
+
+      <article class="dashboard-card">
+
+        <div class="card-top">
+
+          <span class="card-label">
+            Bloqués
+          </span>
+
+          <span class="card-icon">
+            !
+          </span>
+
+        </div>
+
+        <strong
+          class="card-value"
+          id="admin-blocked-count"
+        >
+          —
+        </strong>
+
+        <p class="card-description">
+          Comptes dont l’accès est suspendu.
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- LISTE DES COMPTES -->
+
+    <div class="dashboard-panel">
+
+      <div class="admin-panel-head">
+
+        <div>
+
+          <h3>
+            Comptes formateurs
+          </h3>
+
+          <p>
+            Gérez les comptes, leurs droits et
+            leur accès au portail.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div id="admin-users-list">
+
+        <div class="status-badge">
+          Chargement des comptes…
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================================
+       FOOTER
+       ================================================= -->
+
+  <footer class="page-footer">
+    VIR — Espace formateur
+  </footer>
+
+</div>
+
+  </main>
 
   <!-- =================================
        JAVASCRIPT
@@ -1537,6 +1838,39 @@
     src="./js/codegene.js"
     defer
   ></script>
+
+    <!-- =================================================
+        LIGHTBOX IMAGE CIRCUIT
+        ================================================= -->
+
+    <div
+    class="image-lightbox"
+    id="image-lightbox"
+    aria-hidden="true"
+    >
+
+    <button
+        class="image-lightbox-close"
+        type="button"
+        id="image-lightbox-close"
+        aria-label="Fermer l'image"
+    >
+        ×
+    </button>
+
+    <div class="image-lightbox-content">
+
+        <img
+        id="image-lightbox-img"
+        src=""
+        alt=""
+        >
+
+    </div>
+
+    </div>
+
+
 
 </body>
 
