@@ -317,10 +317,11 @@ function setupNavigation() {
      */
 
     const allowedSections = [
-      "accueil",
-      "formation-agent",
-      "evaluations",
-      "administration"
+    "accueil",
+    "formation-agent",
+    "circuits",
+    "evaluations",
+    "administration"
     ];
 
 
@@ -573,6 +574,124 @@ function showConnectionError() {
   }
 
 }
+
+
+/* =========================================================
+   LIGHTBOX — IMAGES CIRCUITS
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const lightbox =
+    document.getElementById("image-lightbox");
+
+  const lightboxImage =
+    document.getElementById("image-lightbox-img");
+
+  const closeButton =
+    document.getElementById("image-lightbox-close");
+
+  const clickableImages =
+    document.querySelectorAll("[data-lightbox-image]");
+
+
+  if (
+    !lightbox ||
+    !lightboxImage ||
+    !closeButton
+  ) {
+    return;
+  }
+
+
+  /* =======================================================
+     OUVRIR
+     ======================================================= */
+
+  clickableImages.forEach((image) => {
+
+    image.addEventListener("click", () => {
+
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+
+      lightbox.classList.add("is-open");
+
+      lightbox.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+      document.body.style.overflow = "hidden";
+
+    });
+
+  });
+
+
+  /* =======================================================
+     FERMER
+     ======================================================= */
+
+  function closeLightbox() {
+
+    lightbox.classList.remove("is-open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    document.body.style.overflow = "";
+
+    setTimeout(() => {
+
+      lightboxImage.src = "";
+
+    }, 200);
+
+  }
+
+
+  closeButton.addEventListener(
+    "click",
+    closeLightbox
+  );
+
+
+  /* =======================================================
+     CLIQUER EN DEHORS DE L'IMAGE
+     ======================================================= */
+
+  lightbox.addEventListener("click", (event) => {
+
+    if (
+      event.target === lightbox ||
+      event.target === lightbox.querySelector(".image-lightbox-content")
+    ) {
+      closeLightbox();
+    }
+
+  });
+
+
+  /* =======================================================
+     TOUCHE ÉCHAP
+     ======================================================= */
+
+  document.addEventListener("keydown", (event) => {
+
+    if (
+      event.key === "Escape" &&
+      lightbox.classList.contains("is-open")
+    ) {
+      closeLightbox();
+    }
+
+  });
+
+});
+
 
 
 /* ==================================================
