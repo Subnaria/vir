@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0f16">
+  <meta name="robots" content="noindex">
+  <title>VIR — Accès depuis un ordinateur uniquement</title>
+  <script src="./js/mobile-guard.js"></script>
+  <style>
+    :root { color-scheme: dark; font-family: "Segoe UI", system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #0a0f16; color: #c3cfdb; line-height: 1.65; }
+    main { width: 100%; max-width: 440px; }
+    .brand { color: #f0f4f8; font-size: 1.75rem; font-weight: 800; letter-spacing: .06em; }
+    .brand small { display: block; margin-top: 4px; color: #93a4b6; font-size: .875rem; font-weight: 400; letter-spacing: 0; }
+    .card { margin-top: 28px; padding: 28px 24px; border: 1px solid rgba(240, 119, 124, .4); border-left: 4px solid #f0777c; border-radius: 14px; background: #111a25; }
+    h1 { margin: 0 0 12px; color: #f0f4f8; font-size: 1.5rem; line-height: 1.25; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin: 0; }
+    strong { color: #f0f4f8; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">Formation<small>VIR</small></div>
+    <section class="card">
+      <h1>Ce site n’est pas accessible sur téléphone</h1>
+      <p>Pour éviter les cas de triche pendant les formations et les évaluations, le portail VIR doit être consulté depuis un <strong>ordinateur</strong>.</p>
+      <p>Ouvrez ce lien depuis votre PC pour accéder à la formation.</p>
+      <button onclick="window.location.href='../index.html'" style="padding: 8px 16px; border: none; border-radius: 4px; background-color: #f0777c; color: #fff; font-size: 1rem; cursor: pointer;">Retour à l’accueil (si vous êtes sur un ordinateur)</button>
+    </section>
+  </main>
+</body>
+</html>

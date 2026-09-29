@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0f16">
+  <meta name="description" content="Quiz de révision de la doctrine VIR : testez-vous par module ou sur l’ensemble de la formation.">
+  <title>Me tester — VIR</title>
+  <script src="./js/mobile-guard.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/mobileguard.js"></script>
+</head>
+<body data-page="quiz">
+  <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+    <a class="brand" href="./index.html"><strong>VIR</strong><small>Véhicule d’Intervention Rapide</small></a>
+    <nav class="primary-nav">
+      <a class="nav-link" href="./index.html">Accueil</a>
+      <a class="nav-link" href="./formation.html">Formation</a>
+      <a class="nav-link is-active" href="./me-tester.html" aria-current="page">Me tester</a>
+      <a class="nav-link" href="./evaluation.html"> Évaluation </a> </nav>
+    </nav>
+  </aside>
+  <div class="mobile-scrim" data-close-sidebar></div>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" type="button" aria-label="Ouvrir la navigation" aria-expanded="false" aria-controls="sidebar" data-menu-toggle><span></span><span></span><span></span></button>
+      <div class="topbar-title"><a href="./index.html">Unité VIR</a><span>Me tester</span></div>
+      <a class="button" href="./formation.html">Revoir la formation</a>
+    </header>
+
+    <div class="page-wrap quiz-wrap">
+      <!-- Écran 1 : choix -->
+      <section id="quiz-setup">
+        <p class="kicker">Révision</p>
+        <h1 class="quiz-title">Me tester</h1>
+        <p class="quiz-lead">Répondez à des questions à 4 choix pour vérifier ce que vous avez retenu. Choisissez un module précis ou toute la formation.</p>
+        <div class="scope-grid" id="scope-grid"></div>
+        <button class="button button-primary quiz-start" id="start-btn" type="button">Commencer le test</button>
+      </section>
+
+      <!-- Écran 2 : questions -->
+      <section id="quiz-play" hidden>
+        <div class="quiz-top">
+          <div><strong id="quiz-count"></strong><span id="quiz-module"></span></div>
+          <button class="quiz-quit" id="quit-btn" type="button">Quitter</button>
+        </div>
+        <div class="progress-track"><span id="quiz-bar" style="width:0%"></span></div>
+        <article class="quiz-card">
+          <h2 id="quiz-question"></h2>
+          <div class="options" id="quiz-options"></div>
+          <div class="feedback" id="quiz-feedback" aria-live="polite" hidden></div>
+        </article>
+        <div class="quiz-actions"><button class="button button-primary" id="quiz-next" type="button" hidden>Question suivante</button></div>
+        <p class="quiz-hint">Les touches 1 à 4 du clavier sélectionnent une réponse. La navigation du site est désactivée pendant le test.</p>
+      </section>
+
+      <!-- Écran 3 : résultat -->
+      <section id="quiz-result" hidden>
+        <p class="kicker">Résultat</p>
+        <div class="result-head">
+          <div class="result-score" id="result-score"></div>
+          <div><h2 id="result-pct"></h2><p id="result-msg"></p></div>
+        </div>
+        <ul class="result-modules" id="result-modules" hidden></ul>
+        <div class="block" id="result-missed" hidden>
+          <h3>À revoir</h3>
+          <ul class="missed-list" id="result-missed-list"></ul>
+        </div>
+        <div class="quiz-actions">
+          <button class="button button-primary" id="retry-missed" type="button">Refaire mes erreurs</button>
+          <button class="button" id="restart-btn" type="button">Recommencer</button>
+          <button class="button" id="change-btn" type="button">Changer de module</button>
+        </div>
+      </section>
+
+      <footer class="page-footer"><a href="./index.html">Retour à l’accueil</a></footer>
+    </div>
+  </main>
+  <script src="./js/app.js" defer></script>
+  <script src="./js/questions.js" defer></script>
+  <script src="./js/quiz.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0f16">
+  <meta name="description" content="Doctrine opérationnelle et modules de formation de l’unité VIR.">
+  <title>Formation — VIR</title>
+  <script src="./js/mobileguard.js"></script>
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/mobileguard.js"></script>
+</head>
+<body data-page="training">
+  <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+    <a class="brand" href="./index.html"><strong>VIR</strong><small>Véhicule d’Intervention Rapide</small></a>
+    <nav class="primary-nav">
+      <a class="nav-link" href="./index.html">Accueil</a>
+      <a class="nav-link is-active" href="./formation.html" aria-current="page">Formation</a>
+      <div class="sidebar-modules">
+        <a href="#module-1"><span>01</span>Rôle de la VIR</a>
+        <a href="#module-2"><span>02</span>Conditions de déploiement</a>
+        <a href="#module-3"><span>03</span>Doctrine d’intervention</a>
+      </div>
+      <a class="nav-link" href="./me-tester.html">Me tester</a>
+      <a class="nav-link" href="./evaluation.html"> Évaluation </a> </nav>
+    </nav>
+  </aside>
+  <div class="mobile-scrim" data-close-sidebar></div>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="menu-toggle" type="button" aria-label="Ouvrir la navigation" aria-expanded="false" aria-controls="sidebar" data-menu-toggle><span></span><span></span><span></span></button>
+      <div class="topbar-title"><a href="./index.html">Unité VIR</a><span>Formation</span></div>
+      <a class="button" href="./index.html">← Retour à l’accueil</a>
+    </header>
+
+    <div class="page-wrap">
+      <section class="training-head">
+        <div>
+          <p class="kicker">Formation VIR</p>
+          <h1>Doctrine opérationnelle</h1>
+          <p>Parcourez les trois modules pour maîtriser les fondamentaux de l’unité.</p>
+        </div>
+        <div class="progress"><div class="progress-label"><span>3 modules · V1.0</span><strong data-progress-percent>0%</strong></div><div class="progress-track"><span data-progress-bar style="width:0%"></span></div></div>
+      </section>
+
+      <div class="training-layout">
+        <div class="modules-column">
+
+          <!-- MODULE 01 -->
+          <article class="training-module" id="module-1" data-training-module="1">
+            <div class="module-title"><span class="num">01</span><div><h2>Rôle de la VIR</h2><p>Comprendre la fonction et les priorités d’un Véhicule d’Intervention Rapide.</p></div></div>
+            <div class="card-grid">
+              <section class="card"><span class="ref">1.1</span><h3>Définition</h3><p>La VIR signifie <strong>Véhicule d’Intervention Rapide.</strong></p></section>
+              <section class="card"><span class="ref">1.2</span><h3>Mission principale</h3><p>Intervenir en priorité sur les courses-poursuites à haute vitesse : Go Fast, refus d’obtempérer, ventes de drogue, etc.</p></section>
+              <section class="card"><span class="ref">1.3</span><h3>Objectif</h3><p>Assurer une intervention efficace, rapide et adaptée lorsque les patrouilles classiques sont dépassées.</p></section>
+              <section class="card card-key"><span class="ref">1.4</span><h3>Utilisation et priorité</h3><p>La VIR intervient en complément des autres patrouilles. Elle prend automatiquement la <strong>P1 (Pilote 1)</strong> sur la poursuite, sauf si une unité MSG est déjà présente sur les lieux.</p></section>
+            </div>
+            <div class="done-row"><button class="completion-button" type="button" data-complete-module="1">Marquer comme maîtrisé <span>✓</span></button></div>
+          </article>
+
+          <!-- MODULE 02 -->
+          <article class="training-module" id="module-2" data-training-module="2">
+            <div class="module-title"><span class="num">02</span><div><h2>Conditions de déploiement</h2><p>Les règles encadrant la sortie, l’utilisation et la prise de service du véhicule.</p></div></div>
+
+            <section class="block">
+              <h3><span class="ref">2.1</span>Motifs d’engagement autorisés</h3>
+              <ul class="checks">
+                <li>Poursuite engagée contre un véhicule haute performance, Go Fast ou délit de fuite.</li>
+                <li>Demande explicite de renfort radio par une patrouille en difficulté.</li>
+                <li>Refus d’obtempérer présentant un danger imminent, ou grosse scène (braquage PDM, banque, etc.).</li>
+              </ul>
+              <div class="quote"><small>Exemple radio</small>« Adam 69 besoin de 10-23 d’une VIR sur mon 10-20, 10-31… »</div>
+            </section>
+
+            <section class="block block-warn">
+              <h3><span class="ref">2.2</span>Interdictions et quotas en ville</h3>
+              <ul class="rules">
+                <li><h4>Patrouille basique</h4><p>La VIR est déconseillée pour la routine ou les contrôles lambda. Elle reste un véhicule d’intervention ciblée.</p></li>
+                <li><h4>Habilitation obligatoire</h4><p>Il est strictement interdit de sortir le véhicule sans qualification ou formation VIR validée.</p></li>
+                <li><h4>Minimum en ville</h4><p>Sortie autorisée uniquement s’il y a au moins <strong>2 patrouilles</strong> en ville.</p></li>
+                <li><h4>Une seule VIR</h4><p>Avec 3 unités Adam et 1 VIR, il est interdit d’en sortir une seconde.</p></li>
+              </ul>
+            </section>
+
+            <section class="block">
+              <h3><span class="ref">2.3</span>Prise de service et radio</h3>
+              <div class="two-col">
+                <ol class="steps">
+                  <li>Prise du véhicule décidée au dispatch, ou conditionnée par la présence des 2 patrouilles minimum.</li>
+                  <li>Annonce radio obligatoire à la prise de service.</li>
+                  <li>S’annoncer avec l’indicatif VIR à chaque prise de parole.</li>
+                </ol>
+                <div class="quote" style="margin-top:0"><small>Annonce obligatoire</small>« VIR [Matricule]<br>10-41 tout secteur »</div>
+              </div>
+              <h4 class="sub-title">Contrôle du véhicule</h4>
+              <ul class="checks checks-inline"><li>Plein d’essence</li><li>Moteur à 100 %</li><li>Contrôle avant départ</li><li>Contrôle en fin de patrouille</li></ul>
+            </section>
+
+            <section class="block">
+              <h3><span class="ref">2.4</span>Capacité du véhicule et transport</h3>
+              <div class="two-col">
+                <div class="seats"><div class="seat"><b>1</b><span>Pilote</span></div><div class="seat"><b>2</b><span>Copilote</span><small>Radio et GPS</small></div></div>
+                <div class="note"><h4>Transport d’un suspect interdit</h4><p>Règle générale : après une interpellation, demander impérativement une autre unité sur zone.</p><small>Exception : extrême urgence ou absence totale d’autres patrouilles.</small></div>
+              </div>
+            </section>
+            <div class="done-row"><button class="completion-button" type="button" data-complete-module="2">Marquer comme maîtrisé <span>✓</span></button></div>
+          </article>
+
+          <!-- MODULE 03 -->
+          <article class="training-module" id="module-3" data-training-module="3">
+            <div class="module-title"><span class="num">03</span><div><h2>Doctrine d’intervention</h2><p>Placement de la VIR pendant une poursuite et gestion des positions opérationnelles.</p></div></div>
+            <div class="sequence" aria-label="P1 puis P2 puis P3">
+              <div class="step-card"><b>P1</b><strong>Premier véhicule</strong><p>Maintien du visuel et conduite de la poursuite.</p></div><span class="sep" aria-hidden="true">→</span>
+              <div class="step-card"><b>P2</b><strong>Soutien direct</strong><p>Relais radio et soutien immédiat.</p></div><span class="sep" aria-hidden="true">→</span>
+              <div class="step-card"><b>P3</b><strong>Soutien</strong><p>Anticipation et appui aux unités engagées.</p></div>
+            </div>
+            <section class="block">
+              <h3><span class="ref">3.1</span>Prise de position P1 / P2 / P3</h3>
+              <ul class="cases">
+                <li><h4>En P1</h4><p>La VIR prend la tête pour maintenir le visuel sur le suspect <strong>sans le percuter.</strong></p></li>
+                <li><h4>Si la MSG arrive</h4><p>La VIR cède immédiatement la P1 à la MSG et repasse en <strong>P2</strong> (soutien direct, relais radio).</p></li>
+                <li><h4>Si une patrouille classique est en P1</h4><div><p>La VIR demande clairement le dépassement en radio :</p><div class="quote">« VIR pour Adam 69, demande de dépassement pour prise de P1 »</div><p>Elle attend l’autorisation ou le décalage de l’unité avant d’engager le dépassement.</p></div></li>
+              </ul>
+            </section>
+            <div class="done-row"><button class="completion-button" type="button" data-complete-module="3">Marquer comme maîtrisé <span>✓</span></button></div>
+          </article>
+
+          <footer class="page-footer"><a href="./me-tester.html">Me tester sur ces modules</a> &nbsp;·&nbsp; <a href="./index.html">Retour à l’accueil</a></footer>
+        </div>
+
+        <aside class="training-nav-wrap" aria-label="Navigation de la formation">
+          <nav class="training-nav">
+            <h2>Navigation</h2>
+            <a href="#module-1" data-module-link="1"><b>01</b>Rôle de la VIR</a>
+            <a href="#module-2" data-module-link="2"><b>02</b>Conditions de déploiement</a>
+            <a href="#module-3" data-module-link="3"><b>03</b>Doctrine d’intervention</a>
+            <div class="progress"><div class="progress-label"><span>Parcours</span><strong data-nav-progress>0%</strong></div><div class="progress-track"><span data-progress-bar style="width:0%"></span></div></div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <script src="./js/app.js" defer></script>>
+</body>
+</html>

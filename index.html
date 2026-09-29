@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0a0f16"
+  >
+
+  <meta
+    name="description"
+    content="Portail officiel de formation de l’unité Véhicule d’Intervention Rapide."
+  >
+
+
+  <title>Accueil — VIR</title>
+
+  <script src="./js/mobileguard.js"></script>
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+</head>
+
+<body data-page="home">
+
+  <!-- =====================================================
+       SIDEBAR
+       ===================================================== -->
+
+  <aside
+    class="sidebar"
+    id="sidebar"
+    aria-label="Navigation principale"
+  >
+
+    <a
+      class="brand"
+      href="./index.html"
+    >
+      <strong>VIR</strong>
+      <small>Véhicule d’Intervention Rapide</small>
+    </a>
+
+    <nav class="primary-nav">
+
+      <a
+        class="nav-link is-active"
+        href="./index.html"
+        aria-current="page"
+      >
+        Accueil
+      </a>
+
+      <a
+        class="nav-link"
+        href="./formation.html"
+      >
+        Formation
+      </a>
+
+      <a
+        class="nav-link"
+        href="./me-tester.html"
+      >
+        Me tester
+      </a>
+
+      <a
+        class="nav-link"
+        href="./evaluation.html"
+      >
+        Évaluation
+      </a>
+
+    </nav>
+
+    <div class="sidebar-foot">
+
+      <a
+        class="staff-link"
+        href="./formateur/connexion.html"
+      >
+        <svg
+          viewBox="0 0 18 18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect
+            x="3.5"
+            y="8"
+            width="11"
+            height="7.5"
+            rx="1.5"
+          />
+
+          <path
+            d="M6 8V5.5a3 3 0 0 1 6 0V8"
+          />
+        </svg>
+
+        Connexion formateur
+      </a>
+
+    </div>
+
+  </aside>
+
+  <div
+    class="mobile-scrim"
+    data-close-sidebar
+  ></div>
+
+
+  <!-- =====================================================
+       CONTENU PRINCIPAL
+       ===================================================== -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir la navigation"
+        aria-expanded="false"
+        aria-controls="sidebar"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="topbar-title">
+        <b>Unité VIR</b>
+        <span>Portail de formation</span>
+      </div>
+
+      <a
+        class="button"
+        href="./formation.html"
+      >
+        Accéder aux modules →
+      </a>
+
+    </header>
+
+
+    <div class="page-wrap">
+
+      <!-- =================================================
+           HERO
+           ================================================= -->
+
+      <section class="hero">
+
+        <div>
+
+          <p class="kicker">
+            Formation officielle
+          </p>
+
+          <h1>
+            Formation Véhicule d’Intervention Rapide
+          </h1>
+
+          <p>
+            Bienvenue sur le portail officiel de formation
+            de l’unité VIR.
+          </p>
+
+          <p>
+            Cette formation a pour objectif de vous transmettre
+            les connaissances et les méthodes nécessaires à
+            l’utilisation de la VIR en situation opérationnelle :
+            rôle de l’unité, conditions de déploiement,
+            coordination et doctrine d’intervention.
+          </p>
+
+          <p>
+            La formation se déroule en deux parties :
+            une préparation théorique suivie d’une évaluation,
+            puis une mise en pratique sur circuit.
+          </p>
+
+          <p>
+            <strong>
+              Préparez-vous, maîtrisez la doctrine et validez
+              chaque étape de la formation.
+            </strong>
+          </p>
+
+          <p>
+            <small>
+              Formation créée et administrée par
+              <strong>69 • Lorenzo Bellanger</strong>
+            </small>
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-primary"
+              href="./formation.html"
+            >
+              Accéder aux modules →
+            </a>
+
+            <a
+              class="button"
+              href="#reussir-formation"
+            >
+              Voir le parcours de réussite ↓
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- SCHÉMA VIR -->
+
+        <svg
+          class="hero-figure"
+          viewBox="0 0 360 360"
+          role="img"
+          aria-label="Schéma des positions P1, P2 et P3 autour de la VIR"
+        >
+
+          <circle
+            class="ring ring-dash"
+            cx="180"
+            cy="180"
+            r="165"
+          />
+
+          <circle
+            class="ring"
+            cx="180"
+            cy="180"
+            r="115"
+          />
+
+          <circle
+            class="ring"
+            cx="180"
+            cy="180"
+            r="65"
+          />
+
+          <line
+            class="link"
+            x1="180"
+            y1="180"
+            x2="265"
+            y2="80"
+          />
+
+          <line
+            class="link"
+            x1="180"
+            y1="180"
+            x2="60"
+            y2="215"
+          />
+
+          <line
+            class="link"
+            x1="180"
+            y1="180"
+            x2="245"
+            y2="300"
+          />
+
+          <circle
+            class="core"
+            cx="180"
+            cy="180"
+            r="40"
+          />
+
+          <text
+            x="180"
+            y="187"
+          >
+            VIR
+          </text>
+
+          <circle
+            class="node"
+            cx="265"
+            cy="80"
+            r="9"
+          />
+
+          <text
+            x="265"
+            y="58"
+          >
+            P1
+          </text>
+
+          <text
+            class="sub"
+            x="265"
+            y="108"
+          >
+            contacte
+          </text>
+
+
+          <circle
+            class="node"
+            cx="60"
+            cy="215"
+            r="9"
+          />
+
+          <text
+            x="60"
+            y="193"
+          >
+            P2
+          </text>
+
+          <text
+            class="sub"
+            x="60"
+            y="243"
+          >
+            Soutien direct
+          </text>
+
+
+          <circle
+            class="node"
+            cx="245"
+            cy="300"
+            r="9"
+          />
+
+          <text
+            x="245"
+            y="278"
+          >
+            P3
+          </text>
+
+          <text
+            class="sub"
+            x="245"
+            y="328"
+          >
+            Soutien (10-33)
+          </text>
+
+        </svg>
+
+      </section>
+
+
+      <!-- =================================================
+           MODULES
+           ================================================= -->
+
+      <section id="parcours">
+
+        <div class="section-head">
+
+          <div>
+
+            <h2>
+              Votre formation
+            </h2>
+
+            <p>
+              Trois modules pour comprendre la doctrine VIR
+              et intervenir avec méthode et coordination.
+            </p>
+
+          </div>
+
+
+          <div class="progress">
+
+            <div class="progress-label">
+
+              <span>
+                Progression
+              </span>
+
+              <strong>
+                <span data-progress-count>0</span>
+                / 3 modules
+              </strong>
+
+            </div>
+
+            <div class="progress-track">
+
+              <span
+                data-progress-bar
+                style="width: 0%"
+              ></span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="module-grid">
+
+          <!-- MODULE 1 -->
+
+          <a
+            class="module-card"
+            href="./formation.html#module-1"
+            data-home-module="1"
+          >
+
+            <div class="top">
+
+              <span class="num">
+                01
+              </span>
+
+              <span
+                class="module-state"
+                data-module-status="1"
+              >
+                À découvrir
+              </span>
+
+            </div>
+
+            <h3>
+              Rôle de la VIR
+            </h3>
+
+            <p>
+              Définition, missions principales,
+              objectifs et règles de priorité.
+            </p>
+
+            <span class="open">
+              Ouvrir le module →
+            </span>
+
+          </a>
+
+
+          <!-- MODULE 2 -->
+
+          <a
+            class="module-card"
+            href="./formation.html#module-2"
+            data-home-module="2"
+          >
+
+            <div class="top">
+
+              <span class="num">
+                02
+              </span>
+
+              <span
+                class="module-state"
+                data-module-status="2"
+              >
+                À découvrir
+              </span>
+
+            </div>
+
+            <h3>
+              Conditions de déploiement
+            </h3>
+
+            <p>
+              Motifs d’engagement, quotas,
+              prise de service, radio et transport.
+            </p>
+
+            <span class="open">
+              Ouvrir le module →
+            </span>
+
+          </a>
+
+
+          <!-- MODULE 3 -->
+
+          <a
+            class="module-card"
+            href="./formation.html#module-3"
+            data-home-module="3"
+          >
+
+            <div class="top">
+
+              <span class="num">
+                03
+              </span>
+
+              <span
+                class="module-state"
+                data-module-status="3"
+              >
+                À découvrir
+              </span>
+
+            </div>
+
+            <h3>
+              Doctrine d’intervention
+            </h3>
+
+            <p>
+              Placement en poursuite et gestion
+              des positions P1, P2 et P3.
+            </p>
+
+            <span class="open">
+              Ouvrir le module →
+            </span>
+
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           COMMENT RÉUSSIR SA FORMATION
+           ================================================= -->
+
+      <section
+        class="success-path"
+        id="reussir-formation"
+      >
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="kicker">
+              Parcours de réussite
+            </p>
+
+            <h2>
+              Comment réussir sa formation ?
+            </h2>
+
+            <p>
+              La formation VIR se déroule en trois étapes.
+              Prenez le temps de maîtriser la théorie avant
+              de passer à l’évaluation et à la pratique.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="success-grid">
+
+          <!-- ÉTAPE 1 -->
+
+          <article class="success-card">
+
+            <div class="success-number">
+              01
+            </div>
+
+            <div class="success-content">
+
+              <span class="success-label">
+                THÉORIE
+              </span>
+
+              <h3>
+                Maîtriser les bases
+              </h3>
+
+              <p>
+                Commencez par étudier attentivement les trois
+                modules de formation. Vous devez connaître le
+                rôle de la VIR, ses conditions de déploiement
+                ainsi que sa doctrine d’intervention.
+              </p>
+
+              <ul class="success-list">
+
+                <li>
+                  Rôle et missions de la VIR
+                </li>
+
+                <li>
+                  Conditions de déploiement
+                </li>
+
+                <li>
+                  Doctrine et positions P1, P2 et P3
+                </li>
+
+              </ul>
+
+              <a
+                class="button"
+                href="./formation.html"
+              >
+                Consulter la formation →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- ÉTAPE 2 -->
+
+          <article class="success-card success-card-highlight">
+
+            <div class="success-number">
+              02
+            </div>
+
+            <div class="success-content">
+
+              <span class="success-label">
+                ÉVALUATION
+              </span>
+
+              <h3>
+                Obtenir 24/28 minimum
+              </h3>
+
+              <p>
+                Une fois la partie théorique maîtrisée,
+                vous devez réussir l’évaluation officielle.
+                Elle comporte 28 questions portant sur les
+                différents modules de la formation.
+              </p>
+
+
+              <div class="score-requirement">
+
+                <strong>
+                  24 / 28
+                </strong>
+
+                <span>
+                  score minimum requis
+                </span>
+
+              </div>
+
+
+              <p>
+                Vous pouvez vous entraîner autant que nécessaire
+                avec la section <strong>Me tester</strong> afin
+                de vérifier vos connaissances avant de passer
+                l’évaluation officielle.
+              </p>
+
+
+              <div class="success-actions">
+
+                <a
+                  class="button"
+                  href="./me-tester.html"
+                >
+                  Me tester →
+                </a>
+
+                <a
+                  class="button button-primary"
+                  href="./evaluation.html"
+                >
+                  Évaluation officielle →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- ÉTAPE 3 -->
+
+          <article class="success-card">
+
+            <div class="success-number">
+              03
+            </div>
+
+            <div class="success-content">
+
+              <span class="success-label">
+                PRATIQUE
+              </span>
+
+              <h3>
+                Valider la pratique
+              </h3>
+
+              <p>
+                Après avoir validé la théorie et l’évaluation,
+                vous passez à la partie pratique. Cette étape
+                permet de vérifier votre maîtrise opérationnelle
+                de la VIR.
+              </p>
+
+
+              <ul class="success-list">
+
+                <li>
+                  Réalisation de 2 circuits
+                </li>
+
+                <li>
+                  Respect du parcours demandé
+                </li>
+
+                <li>
+                  Respect du temps imparti
+                </li>
+
+                <li>
+                  Application des consignes données
+                </li>
+
+              </ul>
+
+
+              <div class="success-note">
+
+                <strong>
+                  Objectif
+                </strong>
+
+                <span>
+                  Être capable de réaliser les circuits
+                  correctement, rapidement et en respectant
+                  les consignes opérationnelles.
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- RÉSUMÉ -->
+
+        <div class="success-summary">
+
+          <div>
+
+            <span class="success-summary-number">
+              01
+            </span>
+
+            <div>
+
+              <strong>
+                Apprendre
+              </strong>
+
+              <p>
+                Maîtrisez les trois modules théoriques.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <span class="success-summary-number">
+              02
+            </span>
+
+            <div>
+
+              <strong>
+                Évaluer
+              </strong>
+
+              <p>
+                Obtenez au minimum 24/28 à l’évaluation.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <span class="success-summary-number">
+              03
+            </span>
+
+            <div>
+
+              <strong>
+                Pratiquer
+              </strong>
+
+              <p>
+                Réussissez les deux circuits dans le temps demandé.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           FOOTER
+           ================================================= -->
+
+      <footer class="page-footer">
+        VIR — Portail de formation
+      </footer>
+
+    </div>
+
+  </main>
+
+
+  <script
+    src="./js/app.js"
+    defer
+  ></script>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0a0f16"
+  >
+
+  <meta
+    name="robots"
+    content="noindex"
+  >
+
+  <title>Connexion formateur — VIR</title>
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <script src="../js/mobileguard.js"></script>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+  <style>
+    .login-page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .login-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+
+      height: 72px;
+
+      padding: 0 clamp(24px, 5vw, 64px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .login-top .brand {
+      padding: 0;
+      border: 0;
+    }
+
+    .login-main {
+      display: grid;
+      place-items: center;
+
+      padding: 48px 24px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 440px;
+
+      padding: 36px;
+
+      border: 1px solid var(--line-2);
+      border-radius: 18px;
+
+      background: var(--panel);
+    }
+
+    .login-card h1 {
+      margin-bottom: 8px;
+
+      font-size: 1.75rem;
+      font-weight: 800;
+    }
+
+    .login-card > p {
+      margin-bottom: 28px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+
+      margin-bottom: 18px;
+    }
+
+    .field label {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .field input {
+      width: 100%;
+      min-height: 48px;
+
+      padding: 0 16px;
+
+      border: 1px solid var(--line-2);
+      border-radius: 10px;
+
+      background: var(--bg);
+      color: var(--text);
+
+      font: inherit;
+      font-size: 1.0625rem;
+
+      box-sizing: border-box;
+    }
+
+    .field input:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px;
+
+      border-color: var(--blue);
+    }
+
+    .login-card .button-primary {
+      width: 100%;
+
+      cursor: pointer;
+
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .login-card .button-primary:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .login-error {
+      margin-bottom: 18px;
+
+      padding: 14px 16px;
+
+      border-left: 3px solid var(--red);
+      border-radius: 0 10px 10px 0;
+
+      background: var(--red-soft);
+      color: var(--text);
+    }
+
+    .login-help {
+      margin-top: 20px;
+
+      color: var(--muted);
+
+      font-size: 0.9375rem;
+    }
+
+    @media (max-width: 720px) {
+
+      .login-top {
+        height: 64px;
+        padding: 0 16px;
+      }
+
+      .login-card {
+        padding: 26px 20px;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body data-page="login">
+
+  <div class="login-page">
+
+    <!-- HEADER -->
+
+    <header class="login-top">
+
+      <a
+        class="brand"
+        href="../index.html"
+      >
+        <strong>VIR</strong>
+
+        <small>
+          Véhicule d’Intervention Rapide
+        </small>
+      </a>
+
+
+      <a
+        class="button"
+        href="../index.html"
+      >
+        ← Retour au portail
+      </a>
+
+    </header>
+
+
+    <!-- CONTENU -->
+
+    <main class="login-main">
+
+      <section
+        class="login-card"
+        aria-labelledby="login-title"
+      >
+
+        <h1 id="login-title">
+          Connexion formateur
+        </h1>
+
+        <p>
+          Réservé aux formateurs et responsables
+          de l’unité VIR.
+        </p>
+
+
+        <!-- ERREUR -->
+
+        <div
+          class="login-error"
+          id="login-error"
+          role="alert"
+          hidden
+        ></div>
+
+
+        <!-- FORMULAIRE -->
+
+        <form
+          id="login-form"
+          novalidate
+        >
+
+          <div class="field">
+
+            <label for="identifiant">
+              Identifiant
+            </label>
+
+            <input
+              id="identifiant"
+              name="identifiant"
+              type="text"
+              autocomplete="username"
+              inputmode="numeric"
+              required
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="motdepasse">
+              Mot de passe
+            </label>
+
+            <input
+              id="motdepasse"
+              name="motdepasse"
+              type="password"
+              autocomplete="current-password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            class="button button-primary"
+            type="submit"
+            id="login-submit"
+          >
+            Se connecter
+          </button>
+
+        </form>
+
+
+        <p class="login-help">
+          Identifiant ou mot de passe perdu :
+          contactez un responsable de l’unité.
+        </p>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- JS DE CONNEXION -->
+<script src="./js/connexion.js"></script>
+
+</body>
+
+</html>

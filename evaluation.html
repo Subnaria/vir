@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0a0f16"
+  >
+
+  <meta
+    name="description"
+    content="Évaluation officielle de la formation VIR."
+  >
+
+  <title>Évaluation — VIR</title>
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+
+  <script src="./js/mobileguard.js"></script>
+</head>
+
+<body data-page="evaluation">
+
+  <!-- =====================================================
+       SIDEBAR
+       ===================================================== -->
+
+  <aside
+    class="sidebar"
+    id="sidebar"
+    aria-label="Navigation principale"
+  >
+
+    <a
+      class="brand"
+      href="./index.html"
+    >
+      <strong>VIR</strong>
+
+      <small>
+        Véhicule d’Intervention Rapide
+      </small>
+    </a>
+
+    <nav class="primary-nav">
+
+      <a
+        class="nav-link"
+        href="./index.html"
+      >
+        Accueil
+      </a>
+
+      <a
+        class="nav-link"
+        href="./formation.html"
+      >
+        Formation
+      </a>
+
+      <a
+        class="nav-link"
+        href="./me-tester.html"
+      >
+        Me tester
+      </a>
+
+      <a
+        class="nav-link is-active"
+        href="./evaluation.html"
+        aria-current="page"
+      >
+        Évaluation
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MOBILE
+       ===================================================== -->
+
+  <div
+    class="mobile-scrim"
+    data-close-sidebar
+  ></div>
+
+
+  <!-- =====================================================
+       CONTENU
+       ===================================================== -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir la navigation"
+        aria-expanded="false"
+        aria-controls="sidebar"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="topbar-title">
+
+        <a href="./index.html">
+          Unité VIR
+        </a>
+
+        <span>
+          Évaluation
+        </span>
+
+      </div>
+
+      <a
+        class="button"
+        href="./formation.html"
+      >
+        Revoir la formation
+      </a>
+
+    </header>
+
+
+    <div class="page-wrap evaluation-wrap">
+
+
+      <!-- =================================================
+           ÉTAPE 1 — ACCÈS
+           ================================================= -->
+
+      <section id="evaluation-access">
+
+        <p class="kicker">
+          Évaluation officielle
+        </p>
+
+        <h1 class="quiz-title">
+          Évaluation VIR
+        </h1>
+
+        <p class="quiz-lead">
+          Cette évaluation porte sur l'ensemble de la
+          formation VIR. Elle comprend 28 questions
+          réparties sur les trois modules.
+        </p>
+
+
+        <!-- INFORMATIONS -->
+
+        <div class="block evaluation-info">
+
+          <div class="evaluation-info-item">
+
+            <strong>
+              28
+            </strong>
+
+            <span>
+              questions
+            </span>
+
+          </div>
+
+
+          <div class="evaluation-info-item">
+
+            <strong>
+              24/28
+            </strong>
+
+            <span>
+              Pour réussir
+            </span>
+
+          </div>
+
+
+          <div class="evaluation-info-item">
+
+            <strong>
+              3
+            </strong>
+
+            <span>
+              modules
+            </span>
+
+          </div>
+
+
+          <div class="evaluation-info-item">
+
+            <strong>
+              1
+            </strong>
+
+            <span>
+              tentative
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARTE CODE -->
+
+        <div class="evaluation-card">
+
+          <div class="evaluation-card-header">
+
+            <p class="kicker">
+              Accès sécurisé
+            </p>
+
+            <h2>
+              Entrez votre code de formation
+            </h2>
+
+            <p>
+              Le code vous a été communiqué par votre
+              formateur. Il est personnel et à usage unique.
+            </p>
+
+          </div>
+
+
+          <form
+            id="evaluation-code-form"
+            novalidate
+          >
+
+            <div class="field">
+
+              <label for="evaluation-code">
+                Code de formation
+              </label>
+
+              <input
+                id="evaluation-code"
+                name="code"
+                type="text"
+                placeholder="Ex. VIR-7K4P2M"
+                autocomplete="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                maxlength="32"
+                required
+              >
+
+            </div>
+
+
+            <div
+              class="status-badge"
+              id="evaluation-error"
+              role="alert"
+              hidden
+            ></div>
+
+
+            <button
+              class="button button-primary"
+              id="evaluation-submit"
+              type="submit"
+            >
+              Accéder à l'évaluation
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <!-- AVERTISSEMENT -->
+
+        <div class="evaluation-warning">
+
+          <strong>
+            Avant de commencer
+          </strong>
+
+          <p>
+            Assurez-vous d'être dans de bonnes conditions
+            pour passer l'évaluation. Une fois celle-ci
+            commencée, la navigation du site sera désactivée
+            jusqu'à la remise du résultat.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ÉTAPE 2 — PRÉSENTATION
+           ================================================= -->
+
+      <section
+        id="evaluation-ready"
+        hidden
+      >
+
+        <p class="kicker">
+          Code validé
+        </p>
+
+        <h1 class="quiz-title">
+          Prêt pour l'évaluation ?
+        </h1>
+
+        <p class="quiz-lead">
+          Vous allez commencer l'évaluation officielle
+          de la formation VIR.
+        </p>
+
+
+        <!-- CONDITION DE RÉUSSITE -->
+
+        <div class="evaluation-required-score">
+
+          <strong>
+            ⚠️ Condition de réussite
+          </strong>
+
+          <p>
+            Vous devez obtenir au minimum
+            <strong>24 / 28</strong>
+            pour réussir l'évaluation.
+          </p>
+
+        </div>
+
+
+        <div class="evaluation-card">
+
+
+          <!-- RÉSUMÉ -->
+
+          <div class="evaluation-summary">
+
+            <div>
+
+              <span>
+                Questions
+              </span>
+
+              <strong>
+                28
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                Modules
+              </span>
+
+              <strong>
+                3
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                Tentative
+              </span>
+
+              <strong>
+                Unique
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <!-- MODULES -->
+
+          <div class="evaluation-modules">
+
+
+            <div class="evaluation-module">
+
+              <span>
+                01
+              </span>
+
+              <div>
+
+                <strong>
+                  Rôle de la VIR
+                </strong>
+
+                <small>
+                  Comprendre la mission et le fonctionnement
+                  de l'unité.
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="evaluation-module">
+
+              <span>
+                02
+              </span>
+
+              <div>
+
+                <strong>
+                  Conditions de déploiement
+                </strong>
+
+                <small>
+                  Connaître les conditions et règles de sortie
+                  de la VIR.
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="evaluation-module">
+
+              <span>
+                03
+              </span>
+
+              <div>
+
+                <strong>
+                  Doctrine d'intervention
+                </strong>
+
+                <small>
+                  Maîtriser les positions, dépassements et
+                  procédures radio.
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- BOUTON -->
+
+          <button
+            class="button button-primary"
+            id="evaluation-start"
+            type="button"
+          >
+            Commencer l'évaluation
+          </button>
+
+        </div>
+
+
+        <p class="quiz-hint">
+
+          Une fois l'évaluation commencée, vous ne pourrez
+          plus revenir à la formation avant d'avoir terminé.
+
+          Les réponses ne seront pas indiquées comme
+          correctes ou incorrectes pendant l'évaluation.
+
+        </p>
+
+      </section>
+
+
+      <!-- =================================================
+           ÉTAPE 3 — QUESTIONS
+           ================================================= -->
+
+      <section
+        id="evaluation-play"
+        hidden
+      >
+
+        <div class="quiz-top">
+
+          <div>
+
+            <strong id="evaluation-count">
+              Question 1 sur 28
+            </strong>
+
+            <span id="evaluation-module">
+              Module 01
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROGRESSION -->
+
+        <div class="progress-track">
+
+          <span
+            id="evaluation-bar"
+            style="width: 0%"
+          ></span>
+
+        </div>
+
+
+        <!-- QUESTION -->
+
+        <article class="quiz-card">
+
+          <h2 id="evaluation-question"></h2>
+
+          <div
+            class="options"
+            id="evaluation-options"
+          ></div>
+
+        </article>
+
+
+        <!-- INFORMATION -->
+
+        <p class="quiz-hint">
+
+          Les touches 1 à 4 permettent de sélectionner
+          une réponse.
+
+          Votre réponse est enregistrée automatiquement
+          et vous passez directement à la question suivante.
+
+        </p>
+
+      </section>
+
+
+      <!-- =================================================
+           ÉTAPE 4 — RÉSULTAT
+           ================================================= -->
+
+      <section
+        id="evaluation-result"
+        hidden
+      >
+
+        <p class="kicker">
+          Évaluation terminée
+        </p>
+
+
+        <div class="result-head">
+
+          <div
+            class="result-score"
+            id="evaluation-result-score"
+          >
+            0 / 28
+          </div>
+
+
+          <div>
+
+            <h2 id="evaluation-result-pct">
+              0 %
+            </h2>
+
+            <p id="evaluation-result-msg">
+              Résultat de votre évaluation.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- RÉSULTATS PAR MODULE -->
+
+        <ul
+          class="result-modules"
+          id="evaluation-result-modules"
+        ></ul>
+
+
+        <!-- QUESTIONS RATÉES -->
+
+        <div
+          class="block"
+          id="evaluation-result-missed"
+          hidden
+        >
+
+          <h3>
+            Points à revoir
+          </h3>
+
+          <ul
+            class="missed-list"
+            id="evaluation-result-missed-list"
+          ></ul>
+
+        </div>
+
+
+        <!-- FIN -->
+
+        <div class="evaluation-final">
+
+          <strong>
+            Évaluation enregistrée
+          </strong>
+
+          <p>
+            Votre résultat a été transmis à votre espace
+            formateur.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           FOOTER
+           ================================================= -->
+
+      <footer class="page-footer">
+
+        <a href="./index.html">
+          Retour à l'accueil
+        </a>
+
+      </footer>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
+
+  <script
+    src="./js/app.js"
+    defer
+  ></script>
+
+  <script
+    src="./js/questions.js"
+    defer
+  ></script>
+
+  <script
+    src="./js/evaluation.js"
+    defer
+  ></script>
+
+</body>
+
+</html>
