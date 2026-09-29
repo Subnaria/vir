@@ -11,6 +11,13 @@ const submit =
   document.getElementById("login-submit");
 
 // ==================================================
+// RATE LIMIT CONNEXION
+// ==================================================
+
+const LOGIN_COOLDOWN = 5000; // 5 secondes
+let lastLoginAttempt = 0;
+
+// ==================================================
 // AFFICHER UNE ERREUR
 // ==================================================
 
@@ -24,6 +31,7 @@ function showError(message) {
 // ==================================================
 
 async function checkExistingSession() {
+
   const token =
     localStorage.getItem("vir-session-token");
 
@@ -32,12 +40,17 @@ async function checkExistingSession() {
   }
 
   try {
+
     const response =
       await fetch(`${API_URL}/api/me`, {
         method: "GET",
+
         headers: {
-          "Accept": "application/json",
-          "Authorization": `Bearer ${token}`,
+          "Accept":
+            "application/json",
+
+          "Authorization":
+            `Bearer ${token}`,
         },
       });
 
@@ -46,15 +59,20 @@ async function checkExistingSession() {
         .json()
         .catch(() => ({}));
 
-    // Session encore valide
+    // ==========================================
+    // SESSION ENCORE VALIDE
+    // ==========================================
+
     if (
       response.ok &&
       data.authenticated &&
       data.formateur
     ) {
+
       localStorage.setItem(
         "vir-user",
         JSON.stringify({
+
           id:
             data.formateur.id,
 
@@ -76,7 +94,10 @@ async function checkExistingSession() {
       return;
     }
 
-    // Token invalide ou expiré
+    // ==========================================
+    // TOKEN INVALIDE OU EXPIRÉ
+    // ==========================================
+
     localStorage.removeItem(
       "vir-session-token"
     );
@@ -86,6 +107,7 @@ async function checkExistingSession() {
     );
 
   } catch (error) {
+
     console.error(
       "Impossible de vérifier la session :",
       error
@@ -108,6 +130,44 @@ form.addEventListener(
 
     errorBox.hidden = true;
 
+    // ==========================================
+    // RATE LIMIT LOCAL
+    // ==========================================
+
+    const now =
+      Date.now();
+
+    const timeSinceLastAttempt =
+      now - lastLoginAttempt;
+
+    if (
+      timeSinceLastAttempt <
+      LOGIN_COOLDOWN
+    ) {
+
+      const remaining =
+        Math.ceil(
+          (
+            LOGIN_COOLDOWN -
+            timeSinceLastAttempt
+          ) / 1000
+        );
+
+      showError(
+        `Veuillez patienter ${remaining} seconde(s) avant de réessayer.`
+      );
+
+      return;
+    }
+
+    // Enregistre la tentative
+    lastLoginAttempt =
+      now;
+
+    // ==========================================
+    // RÉCUPÉRATION DES IDENTIFIANTS
+    // ==========================================
+
     const identifiant =
       form.identifiant.value.trim();
 
@@ -118,6 +178,7 @@ form.addEventListener(
       !identifiant ||
       !motdepasse
     ) {
+
       showError(
         "Renseignez votre identifiant et votre mot de passe."
       );
@@ -125,11 +186,21 @@ form.addEventListener(
       return;
     }
 
-    submit.disabled = true;
+    // ==========================================
+    // BOUTON DE CONNEXION
+    // ==========================================
+
+    submit.disabled =
+      true;
+
     submit.textContent =
       "Connexion…";
 
     try {
+
+      // ========================================
+      // REQUÊTE API
+      // ========================================
 
       const response =
         await fetch(
@@ -140,12 +211,16 @@ form.addEventListener(
             headers: {
               "Content-Type":
                 "application/json",
+
+              "Accept":
+                "application/json",
             },
 
-            body: JSON.stringify({
-              identifiant,
-              motdepasse,
-            }),
+            body:
+              JSON.stringify({
+                identifiant,
+                motdepasse,
+              }),
           }
         );
 
@@ -154,7 +229,15 @@ form.addEventListener(
           .json()
           .catch(() => ({}));
 
-      if (response.status === 401) {
+      // ========================================
+      // IDENTIFIANTS INCORRECTS
+      // ========================================
+
+      if (
+        response.status ===
+        401
+      ) {
+
         showError(
           "Identifiant ou mot de passe incorrect."
         );
@@ -162,7 +245,15 @@ form.addEventListener(
         return;
       }
 
-      if (response.status === 403) {
+      // ========================================
+      // COMPTE BLOQUÉ
+      // ========================================
+
+      if (
+        response.status ===
+        403
+      ) {
+
         showError(
           data.error ||
           "Votre compte est bloqué."
@@ -171,7 +262,29 @@ form.addEventListener(
         return;
       }
 
+      // ========================================
+      // RATE LIMIT SERVEUR
+      // ========================================
+
+      if (
+        response.status ===
+        429
+      ) {
+
+        showError(
+          data.error ||
+          "Trop de tentatives. Veuillez patienter avant de réessayer."
+        );
+
+        return;
+      }
+
+      // ========================================
+      // AUTRE ERREUR
+      // ========================================
+
       if (!response.ok) {
+
         showError(
           data.error ||
           "Le service de connexion est indisponible."
@@ -180,7 +293,12 @@ form.addEventListener(
         return;
       }
 
+      // ========================================
+      // VÉRIFICATION DU TOKEN
+      // ========================================
+
       if (!data.token) {
+
         showError(
           "Le serveur n'a pas fourni de session."
         );
@@ -188,9 +306,9 @@ form.addEventListener(
         return;
       }
 
-      // ==============================
+      // ========================================
       // SAUVEGARDE DE LA SESSION
-      // ==============================
+      // ========================================
 
       localStorage.setItem(
         "vir-session-token",
@@ -200,6 +318,7 @@ form.addEventListener(
       localStorage.setItem(
         "vir-user",
         JSON.stringify({
+
           nom_prenom:
             data.nom_prenom,
 
@@ -211,9 +330,9 @@ form.addEventListener(
         })
       );
 
-      // ==============================
-      // DASHBOARD
-      // ==============================
+      // ========================================
+      // REDIRECTION DASHBOARD
+      // ========================================
 
       window.location.replace(
         "./tableau-de-bord.html"
@@ -232,7 +351,9 @@ form.addEventListener(
 
     } finally {
 
-      submit.disabled = false;
+      submit.disabled =
+        false;
+
       submit.textContent =
         "Se connecter";
     }
